@@ -353,13 +353,13 @@ var pJS = function (tag_id, params) {
 
         /* if shape is image */
 
-        var shape_type = pJS.particles.shape.type;
-        if (typeof (shape_type) === "object") {
-            if (shape_type instanceof Array) {
-                this.shape = shape_type[Math.floor(Math.random() * shape_type.length)];
+        var shapeType = pJS.particles.shape.type;
+        if (typeof (shapeType) === "object") {
+            if (shapeType instanceof Array) {
+                this.shape = shapeType[Math.floor(Math.random() * shapeType.length)];
             }
         } else {
-            this.shape = shape_type;
+            this.shape = shapeType;
         }
 
         if (this.shape === "image") {
@@ -368,16 +368,17 @@ var pJS = function (tag_id, params) {
                 src: sh.image.src,
                 ratio: sh.image.width / sh.image.height
             };
-            if (!this.img.ratio) this.img.ratio = 1;
+            if (!this.img.ratio) {
+                this.img.ratio = 1;
+            }
             if (pJS.tmp.img_type === "svg" && pJS.tmp.source_svg !== undefined) {
                 pJS.fn.vendors.createSvgImg(this);
                 if (pJS.tmp.pushing) {
                     this.img.loaded = false;
                 }
             }
+
         }
-
-
     };
 
 
@@ -387,20 +388,16 @@ var pJS = function (tag_id, params) {
 
         if (p.radius_bubble !== undefined) {
             var radius = p.radius_bubble;
-        } else {
-            var radius = p.radius;
         }
 
-        if (p.opacity_bubble !== undefined) {
+        if (p.opacity_bubbleubble !== undefined) {
             var opacity = p.opacity_bubble;
-        } else {
-            var opacity = p.opacity;
         }
 
         if (p.color.rgb) {
             var color_value = "rgba(' + p.color.rgb.r + ',' + p.color.rgb.g + ',' + p.color.rgb.b + ',' + opacity + ')";
         } else {
-            var color_value = "hsla(' + p.color.hsl.h + ',' + p.color.hsl.s + '%,' + p.color.hsl.l + '%,' + opacity + ')";
+            color_value = "hsla(' + p.color.hsl.h + ',' + p.color.hsl.s + '%,' + p.color.hsl.l + '%,' + opacity + ')";
         }
 
         pJS.canvas.ctx.fillStyle = color_value;
@@ -773,10 +770,10 @@ var pJS = function (tag_id, params) {
         /* on hover event */
         if (pJS.interactivity.events.onhover.enable && isInArray('bubble', pJS.interactivity.events.onhover.mode)) {
 
-            var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
-                dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
-                dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
-                ratio = 1 - dist_mouse / pJS.interactivity.modes.bubble.distance;
+            var dxMouse = p.x - pJS.interactivity.mouse.pos_x,
+                dyMouse = p.y - pJS.interactivity.mouse.pos_y,
+                distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse),
+                ratio = 1 - distMouse / pJS.interactivity.modes.bubble.distance;
 
             function init() {
                 p.opacity_bubble = p.opacity;
@@ -784,7 +781,7 @@ var pJS = function (tag_id, params) {
             }
 
             /* mousemove - check ratio */
-            if (dist_mouse <= pJS.interactivity.modes.bubble.distance) {
+            if (distMouse <= pJS.interactivity.modes.bubble.distance) {
 
                 if (ratio >= 0 && pJS.interactivity.status === "mousemove") {
 
@@ -832,7 +829,6 @@ var pJS = function (tag_id, params) {
             }
 
 
-            /* mouseleave */
             if (pJS.interactivity.status === "mouseleave") {
                 init();
             }
@@ -844,9 +840,9 @@ var pJS = function (tag_id, params) {
 
 
             if (pJS.tmp.bubble_clicking) {
-                var dx_mouse = p.x - pJS.interactivity.mouse.click_pos_x,
-                    dy_mouse = p.y - pJS.interactivity.mouse.click_pos_y,
-                    dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
+                var dxMouse = p.x - pJS.interactivity.mouse.click_pos_x,
+                    dyMouse = p.y - pJS.interactivity.mouse.click_pos_y,
+                    distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse),
                     time_spent = (new Date().getTime() - pJS.interactivity.mouse.click_time) / 1000;
 
                 if (time_spent > pJS.interactivity.modes.bubble.duration) {
@@ -865,7 +861,7 @@ var pJS = function (tag_id, params) {
                 if (bubble_param !== particles_param) {
 
                     if (!pJS.tmp.bubble_duration_end) {
-                        if (dist_mouse <= pJS.interactivity.modes.bubble.distance) {
+                        if (distMouse <= pJS.interactivity.modes.bubble.distance) {
                             if (p_obj_bubble !== undefined) var obj = p_obj_bubble;
                             else var obj = p_obj;
                             if (obj !== bubble_param) {
@@ -907,19 +903,19 @@ var pJS = function (tag_id, params) {
 
         if (pJS.interactivity.events.onhover.enable && isInArray('repulse', pJS.interactivity.events.onhover.mode) && pJS.interactivity.status === "mousemove") {
 
-            var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
-                dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
-                dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse);
+            var dxMouse = p.x - pJS.interactivity.mouse.pos_x,
+                dyMouse = p.y - pJS.interactivity.mouse.pos_y,
+                distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
 
-            var normVec = {x: dx_mouse / dist_mouse, y: dy_mouse / dist_mouse},
+            var normVec = {x: dxMouse / distMouse, y: dyMouse / distMouse},
                 repulseRadius = pJS.interactivity.modes.repulse.distance,
                 velocity = 100,
-                repulseFactor = clamp((1 / repulseRadius) * (-1 * Math.pow(dist_mouse / repulseRadius, 2) + 1) * repulseRadius * velocity, 0, 50);
+                repulseFactor = clamp((1 / repulseRadius) * (-1 * Math.pow(distMouse / repulseRadius, 2) + 1) * repulseRadius * velocity, 0, 50);
 
             var pos = {
                 x: p.x + normVec.x * repulseFactor,
                 y: p.y + normVec.y * repulseFactor
-            }
+            };
 
             if (pJS.particles.move.out_mode === "bounce") {
                 if (pos.x - p.radius > 0 && pos.x + p.radius < pJS.canvas.w) p.x = pos.x;
@@ -1002,24 +998,23 @@ var pJS = function (tag_id, params) {
 
         if (pJS.interactivity.events.onhover.enable && pJS.interactivity.status === "mousemove") {
 
-            var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
-                dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
-                dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse);
+            var dxMouse = p.x - pJS.interactivity.mouse.pos_x,
+                dyMouse = p.y - pJS.interactivity.mouse.pos_y,
+                distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
 
             /* draw a line between the cursor and the particle if the distance between them is under the config distance */
-            if (dist_mouse <= pJS.interactivity.modes.grab.distance) {
+            if (distMouse <= pJS.interactivity.modes.grab.distance) {
 
-                var opacity_line = pJS.interactivity.modes.grab.line_linked.opacity - (dist_mouse / (1 / pJS.interactivity.modes.grab.line_linked.opacity)) / pJS.interactivity.modes.grab.distance;
+                var opacity_line = pJS.interactivity.modes.grab.line_linked.opacity - (distMouse / (1 / pJS.interactivity.modes.grab.line_linked.opacity)) / pJS.interactivity.modes.grab.distance;
 
                 if (opacity_line > 0) {
 
-                    /* style */
-                    var color_line = pJS.particles.line_linked.color_rgb_line;
-                    pJS.canvas.ctx.strokeStyle = 'rgba(' + color_line.r + ',' + color_line.g + ',' + color_line.b + ',' + opacity_line + ')';
-                    pJS.canvas.ctx.lineWidth = pJS.particles.line_linked.width;
-                    //pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
 
-                    /* path */
+                    var color_line = pJS.particles.line_linked.color_rgb_line;
+                    pJS.canvas.ctx.strokeStyle = "rgba(' + color_line.r + ',' + color_line.g + ',' + color_line.b + ',' + opacity_line + ')";
+                    pJS.canvas.ctx.lineWidth = pJS.particles.line_linked.width;
+
+
                     pJS.canvas.ctx.beginPath();
                     pJS.canvas.ctx.moveTo(p.x, p.y);
                     pJS.canvas.ctx.lineTo(pJS.interactivity.mouse.pos_x, pJS.interactivity.mouse.pos_y);
