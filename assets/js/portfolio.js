@@ -8,13 +8,19 @@
             target = target.length ? target : $("[name=' + this.hash.slice(1) + ']");
             if (target.length) {
                 $("html, body").animate({
-                    scrollTop: (target.offset().top - 70)
+                    scrollTop: (target.offset().top - 71)
                 }, 1000, "easeInOutExpo");
                 return false;
             }
         }
     });
-
+    $(document).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $(".scrollTop").fadeIn();
+        } else {
+            $(".scrollTop").fadeOut();
+        }
+    });
     // Closes responsive menu when a scroll trigger link is clicked
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
@@ -41,45 +47,7 @@
 
 })(jQuery);
 
-$(document).ready(function () {
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $(".scroll-top").fadeIn();
-        } else {
-            $(".scroll-top").fadeOut();
-        }
-    });
-
-    $(".scroll-top").click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 100);
-        return false;
-    });
-    $(".filter-button").click(function(){
-        var value = $(this).attr("data-filter");
-
-        if(value === "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show("1000");
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide("3000");
-            $('.filter').filter('.'+value).show("3000");
-
-        }
-        if ($(".filter-button").removeClass("active")) {
-            $(this).removeClass("active");
-        }
-        $(this).addClass("active");
-    });
 
 
 
 
-});
