@@ -10,7 +10,7 @@
 
     <title>Thomas DEMAGNY</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- fonts -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -19,11 +19,8 @@
     <link href="assets/css/portfolio.css" rel="stylesheet">
 
 </head>
-<body>
-<div id="particles-js"></div>
-<!-- script js -->
-<script src="assets/js/particles.js"></script>
-<script src="assets/js/app.js"></script>
+<body id="scrollTop">
+
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -41,7 +38,7 @@
                     <a class="nav-link js-scroll-trigger" href="#about">A Propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Réalisations</a>
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -53,31 +50,134 @@
 
 <!-- Header -->
 <header class="masthead">
+
     <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center">
+
+        <div class="mx-auto  text-center">
             <h1 class="mx-auto my-0 text-uppercase">Thomas DEMAGNY</h1>
-            <h2 class="mx-auto mt-3 mb-5">Développeur PHP</h2>
-            <a href="#about" class="btn btn-primary js-scroll-trigger">Mon cv</a>
+            <h2 class="mx-auto mt-3 mb-5 text-uppercase">Développeur PHP</h2>
+            <a href="#" target="_blank" class="btn btn-primary js-scroll-trigger">Voir mon cv</a>
         </div>
     </div>
+
 </header>
 <!-- About Section -->
 <section id="about" class="about-section">
-    <div class=" container text-center card">
+    <div class=" container text-center">
+        <div class="row">
+            <div class="col-md-12 mb-3 mt-4">
+                <h2 class="text-center">A propos</h2>
+                <hr class="my-4">
+                <p>Passionné d'informatique depuis plusieurs années, j'ai d'abord commencé par le montage hardware en
+                    loisir, jusqu'au jour où je me suis aperçu que ma carrière commerciale ne me convenais plus. J'ai
+                    commencé à m'autoformer en HTML et CSS avant de débuter une formation avec Openclassrooms sur un
+                    parcours PHP.</p>
 
-        <h2 class="">A propos</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur corporis dolores ea earum est ex excepturi facilis laboriosam laborum, natus non qui, quod soluta sunt tempora tempore vero voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur corporis dolores ea earum est ex excepturi facilis laboriosam laborum, natus non qui, quod soluta sunt tempora tempore vero voluptatum!</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light">
-
-</section>
-<!-- Contact Section -->
-<section id="contact" class="contact-section bg-black">
+<!-- WORK Section -->
+<section class="page-section portfolio" id="portfolio">
     <div class="container">
 
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-left text-white-50 pb-4">Portfolio</h2>
+
+
+        <!-- Portfolio Grid Items -->
+        <div class="row">
+
+            <!-- Portfolio Item 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>AGIR</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+
+                    <img class="img-fluid" src="assets/img/portfolio/agir.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>Chalets et Caviar</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="assets/img/portfolio/chalet.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>Festival du film</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="assets/img/portfolio/festival.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>Express FOOD, UML</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="assets/img/portfolio/expressFood.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>Blog, PHP MVC</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+
+                    <img class="img-fluid" src="assets/img/portfolio/blog.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <h4>SnowTricks</h4>
+                            <a type="button" class="button">En savoir plus</a>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="assets/img/portfolio/snow.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="page-section-heading text-left text-white pb-4">Contact</h2>
         <div class="row">
 
             <div class="col-md-4 mb-3 mb-md-0">
@@ -86,7 +186,8 @@
                         <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Mobilité</h4>
                         <hr class="my-4">
-                        <div class="text-black-50">Paris, Alpes Maritimes, Rhône, Bouches du Rhône, Var .</div>
+                        <div class="text-black"><b>Paris, Alpes Maritimes, Rhône-Alpes, Bouches du Rhône, Var .</b>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +198,7 @@
                         <i class="fas fa-envelope text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Email</h4>
                         <hr class="my-4">
-                        <div class="text-black-50">
+                        <div class="text-black">
                             <a href="mailto:demagny.t@hotmail.fr">demagny.t@hotmail.fr</a>
                         </div>
                     </div>
@@ -110,48 +211,51 @@
                         <i class="fas fa-mobile-alt text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Téléphone</h4>
                         <hr class="my-4">
-                        <div class="text-black">+33 6.02.73.42.87</div>
+                        <div class="text-black"><b>+33 6.02.73.42.87</b></div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="social d-flex justify-content-center">
-            <a href="#" class="mx-2">
-                <i class="fab fa-linkedin"></i>
+
+            <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://github.com/thomas-demagny">
+                <i class="fab fa-fw fa-github"></i>
             </a>
-            <a href="#" class="mx-2">
-                <i class="fab fa-github"></i>
+            <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://twitter.com/Thomas_DEMAGNY">
+                <i class="fab fa-fw fa-twitter"></i>
             </a>
-            <a href="#" class="mx-2">
-                <i class="fab fa-twitter"></i>
+            <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+               href="https://www.linkedin.com/in/thomas-demagny/">
+                <i class="fab fa-fw fa-linkedin-in"></i>
             </a>
         </div>
     </div>
 </section>
 
+
+
+
+
 <!-- Footer -->
-<footer class="bg-black text-center text-white-50">
+<footer class="text-center text-white">
     <div class="container">
         Copyright&copy; Thomas DEMAGNY 2019
     </div>
-    <button class="btn btn-primary scroll-top" data-scroll="up" type="button">
-        <i class="fas fa-chevron-up fa-2x"></i>
-    </button>
-
-
+    <div class="scrollTop">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#scrollTop">
+            <i class="fa fa-chevron-circle-up fa-2x"></i>
+        </a>
+    </div>
 
 
 </footer>
 <!-- Bootstrap core JavaScript -->
-<script src="node_modules/jquery/dist/jquery.slim.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Plugin -->
+<script src="node_modules/jquery.easing/jquery.easing.min.js"></script>
 <!-- scripts -->
 <script src="assets/js/portfolio.js"></script>
-
 
 </body>
 </html>
