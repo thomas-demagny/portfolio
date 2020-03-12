@@ -3,6 +3,7 @@
     --hoverStyle: #467370;
     --normalStyle: #FFFFFF;
     --dkStyle: #000000;
+    --greyStyle: #808080;
 }
 
 
@@ -15,7 +16,7 @@ body {
 }
 
 a {
-    color: var(--hoverStyle);
+    color: var(--btnColor);
     font-size: large;
     font-weight: 900;
 }
@@ -25,17 +26,11 @@ a:focus, a:hover {
     font-weight: 900;
     color: var(--normalStyle);
 }
-
+a:active{
+    border: none;
+}
 .bg-black {
     background-color: #161616;
-}
-
-.bg-primary {
-    background-color: var(--btnColor);
-}
-
-.text-primary {
-    color: var(--btnColor);
 }
 
 /*===============================
@@ -108,11 +103,11 @@ a:focus, a:hover {
     }
 
     #mainNav.navbar-shrink .navbar-brand {
-        color: #161616;
+        color: var(--dkStyle);
     }
 
     #mainNav.navbar-shrink .nav-link {
-        color: #161616;
+        color: var(--dkStyle);
         padding: 1.5rem 1.5rem 1.25rem;
         border-bottom: 0.25rem solid transparent;
     }
@@ -160,7 +155,9 @@ a:focus, a:hover {
 
 .btn-primary:active {
     background-color: var(--hoverStyle);
+    border: none;
 }
+
 .btn-social {
     border-radius: 100%;
     display: inline-flex;
@@ -169,12 +166,14 @@ a:focus, a:hover {
     font-size: 1.25rem;
     justify-content: center;
     align-items: center;
-    background: grey;
+    background: var(--greyStyle);
 }
+
 .btn-outline-light {
     color: var(--normalStyle);
     border-color: var(--normalStyle);
 }
+
 /*======================================
             HEADER SECTION
  =====================================*/
@@ -195,6 +194,9 @@ a:focus, a:hover {
     line-height: 4rem;
     letter-spacing: 0.8rem;
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: -ms-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -213,6 +215,7 @@ a:focus, a:hover {
         font-size: 3rem;
         line-height: 3rem;
     }
+
     .masthead h2 {
 
         font-size: 2.5rem;
@@ -240,23 +243,32 @@ a:focus, a:hover {
 /*========================================
  ABOUT SECTION
 ======================================== */
-.about-section{
+.about-section {
     padding: 0;
-    background: linear-gradient(black,white, black);
+    background: linear-gradient(#000000, #808080, #000000);
+    background: -webkit-linear-gradient(#000000, #808080, #000000);
+    background: -o-linear-gradient(#000000, #808080, #000000);
+    background: -moz-linear-gradient(#000000, #808080, #000000);
+    background: -ms-linear-gradient(#000000, #808080, #000000);
 
 }
 
 .about-section p {
     margin-bottom: 30px;
     font-size: 18px;
+    color: var(--dkStyle);
 }
-.about-section h2{
+
+.about-section h2 {
     font-size: 2.25rem;
-    color: white;
+    color: var(--normalStyle);
 }
 
 .card {
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.9));
+    background: -webkit-linear-gradient(var(--dkStyle), var(--normalStyle));
+    background: -o-linear-gradient(var(--dkStyle), var(--normalStyle));
+    background: -moz-linear-gradient(var(--dkStyle), var(--normalStyle));
+    background: -ms-linear-gradient(var(--dkStyle), var(--normalStyle));
     border: none;
 }
 
@@ -267,6 +279,7 @@ a:focus, a:hover {
     padding: 6rem 0;
     background: var(--dkStyle);
 }
+
 .page-section-heading {
     font-size: 2.25rem;
 
@@ -278,6 +291,7 @@ a:focus, a:hover {
         line-height: 2.5rem
     }
 }
+
 .portfolio .portfolio-item {
     cursor: pointer;
     position: relative;
@@ -286,7 +300,7 @@ a:focus, a:hover {
     margin-bottom: 30px;
     border-radius: .5rem;
     overflow: hidden;
-    border : solid 0.5px var(--hoverStyle);
+    border: solid .1rem var(--hoverStyle);
 }
 
 .portfolio .portfolio-item .portfolio-item-caption {
@@ -326,7 +340,7 @@ a:focus, a:hover {
     top: 1rem;
     font-size: 3rem;
     line-height: 3rem;
-    color: #1abc9c;
+    color: var(--btnColor);
     opacity: 1
 }
 
@@ -335,7 +349,11 @@ a:focus, a:hover {
 ======================================== */
 .contact-section {
     padding: 5rem 0 0;
-background: -webkit-linear-gradient(black, grey,black);
+    background: linear-gradient(#000000, #808080, #000000);
+    background: -webkit-linear-gradient(#000000, #808080, #000000);
+    background: -o-linear-gradient(#000000, #808080, #000000);
+    background: -moz-linear-gradient(#000000, #808080, #000000);
+    background: -ms-linear-gradient(#000000, #808080, #000000);
 }
 
 .contact-section .card h4 {
@@ -346,7 +364,17 @@ background: -webkit-linear-gradient(black, grey,black);
     letter-spacing: 0.15rem;
 }
 
-hr {: center;
+.contact-section .card {
+
+    background: rgba(128, 128, 128, 0.2);
+    -moz-box-shadow: 5px 10px 10px 0 var(--dkStyle);
+    -webkit-box-shadow: 5px 10px 10px 0 var(--dkStyle);
+    -o-box-shadow: 5px 10px 10px 0 var(--dkStyle);
+    box-shadow: 5px 10px 10px 0 var(--dkStyle);
+}
+
+hr {
+    align-items: center;
     border-color: var(--btnColor);
     border-width: 0.25rem;
     width: 3rem;
@@ -355,15 +383,16 @@ hr {: center;
 .contact-section .social {
     margin-top: 5rem;
 }
-
+.contact-section .card i{
+    color: var(--btnColor);
+}
 .contact-section .social a {
     text-align: center;
     height: 3rem;
     width: 3rem;
-
     border-radius: 100%;
     line-height: 2rem;
-    color: black;
+    color: var(--dkStyle);
 }
 
 .contact-section .social a:hover {
