@@ -25,10 +25,14 @@ a:focus, a:hover {
     text-decoration: none;
     font-weight: 900;
     color: var(--normalStyle);
+    border-color: var(--normalStyle);
 }
-a:active{
-    border: none;
+
+a:active {
+    text-decoration: var(--normalStyle);
+    border: 0;
 }
+
 .bg-black {
     background-color: #161616;
 }
@@ -142,20 +146,24 @@ a:active{
 
 .btn-primary {
     background-color: var(--btnColor);
+
 }
 
 .btn-primary:hover {
     background-color: var(--hoverStyle);
+
 }
 
 .btn-primary:focus {
     background-color: var(--hoverStyle);
     color: var(--normalStyle);
+    text-decoration: none;
 }
 
 .btn-primary:active {
     background-color: var(--hoverStyle);
     border: none;
+    text-decoration: none;
 }
 
 .btn-social {
@@ -211,9 +219,9 @@ a:active{
 
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .masthead h1 {
-        padding-top: 6rem;
+        padding-top: 10rem;
         font-size: 3rem;
         line-height: 3rem;
     }
@@ -224,7 +232,7 @@ a:active{
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     .masthead {
         height: 100vh;
         padding: 0;
@@ -265,8 +273,13 @@ a:active{
     font-size: 2.25rem;
     color: var(--normalStyle);
 }
+@media (max-width: 992px) {
+    .about-section .page-section-heading {
+        font-size: 2.25rem;
+        padding-top: 3rem;
 
-
+    }
+}
 
 /*========================================
  WORK SECTION
@@ -281,12 +294,7 @@ a:active{
 
 }
 
-@media (min-width: 992px) {
-    .page-section .page-section-heading {
-        font-size: 3rem;
-        line-height: 2.5rem
-    }
-}
+
 
 .portfolio .portfolio-item {
     cursor: pointer;
@@ -352,6 +360,9 @@ a:active{
     background: -ms-linear-gradient(#000000, #808080, #000000);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(#000000), color-stop(#808080), color-stop(#000000));
 }
+.contact-section h2{
+    font-size: 2.25rem;
+}
 
 .contact-section .card h4 {
     font-size: 1rem;
@@ -380,9 +391,11 @@ hr {
 .contact-section .social {
     margin-top: 5rem;
 }
-.contact-section .card i{
+
+.contact-section .card i {
     color: var(--btnColor);
 }
+
 .contact-section .social a {
     text-align: center;
     height: 3rem;

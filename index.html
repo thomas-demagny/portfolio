@@ -53,7 +53,8 @@
         <div class="mx-auto  text-center">
             <h1 class="mx-auto my-0 text-uppercase">Thomas DEMAGNY</h1>
             <h2 class="mx-auto mt-3 mb-5 text-uppercase">Développeur PHP</h2>
-            <a href="assets/img/pdf/CV-DEMAGNY-Thomas.pdf" target="_blank" class="btn btn-primary js-scroll-trigger">Voir mon cv</a>
+            <a href="assets/img/pdf/Thomas-DEMAGNY-cv.pdf" onclick="window.open(this.href);return false"
+               class="btn btn-dark js-scroll-trigger">Voir mon cv</a>
         </div>
     </div>
 </header>
@@ -65,9 +66,12 @@
                 <h2 class="page-section-heading text-center">A propos</h2>
                 <hr class="my-4">
                 <p>Passionné d'informatique depuis plusieurs années, j'ai d'abord commencé par le montage hardware en
-                    loisir, jusqu'au jour où je me suis aperçu que ma carrière commerciale ne me convenais plus. J'ai
-                    commencé à m'autoformer en HTML et CSS avant de débuter une formation avec Openclassrooms sur un
-                    parcours PHP.</p>
+                    tant que
+                    loisir. Ma carrière commerciale ne me convenant plus, j'ai décidé de me reconvertir dans le domaine
+                    du numérique.
+                    J'ai commencé à m'autoformer en HTML et CSS avant de débuter une formation avec Openclassrooms sur
+                    un parcours PHP.<br/></p>
+
 
             </div>
         </div>
@@ -195,7 +199,7 @@
                         <i class="fas fa-mobile-alt fa-2x text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Téléphone</h4>
                         <hr class="my-4">
-                        <div class="text-black"><b>+33 6.02.73.42.87</b></div>
+                        <div class="text-black"><a href="tel:+33602734287"><b>+33 6.02.73.42.87</b></a></div>
                     </div>
                 </div>
             </div>
@@ -227,9 +231,239 @@
             <i class="fa fa-chevron-circle-up fa-2x"></i>
         </a>
     </div>
-
-
 </footer>
+
+<!-- Modal Portfolio -->
+<!-- Portfolio Modal 1 -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-0">Association Agir</h2>
+
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/agir.jpg" alt="">
+                            <p class="mb-5"><b>Création du site vitrine pour l'association AGIR</b><br/>
+                                - Projet réalisé en HTML-CSS-JS<br/>
+                                - Le responsive a été géré avec Bootstrap<br/>
+                                - Installation avec npm.<br/>
+                                - Référencement SEO.
+                            </p>
+                            <a type="button" class="btn btn-primary" href="https://agir10440.fr/"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modal 2 -->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-3">Chalets et Caviar</h2>
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/chalet.jpg" alt="">
+                            <p class="mb-5"><b>Création d'un site WordPress pour un client</b><br/>
+                                - Rédaction d'une documentation à l'attention des utilisateurs (mise à jour WP,
+                                ajout/suppression des chalets ect...)</p>
+
+                            <a type="button" class="btn btn-primary"
+                               href="https://github.com/thomas-demagny/oc.project2"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Github
+                            </a>
+                            <a type="button" class="btn btn-primary" href="https://oc.thomas-demagny.com/projet2"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modal 3 -->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-3">Festival du film</h2>
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/festival.jpg" alt="">
+                            <p class="mb-5"><b>Création d'un site pour un Festival de films:</b><br/>
+                                - Rédaction d'un cahier des charges.<br/>
+                                - Création d'une première version du site avec les fonctionnalités dont a besoin la
+                                cliente.
+                                ‌</p>
+
+                            <a type="button" class="btn btn-primary"
+                               href="https://github.com/thomas-demagny/Festival-du-film"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Github
+                            </a>
+                            <a type="button" class="btn btn-primary" href="https://oc.thomas-demagny.com/festival"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modal 4 -->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-3">Express Food</h2>
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/expressFood.jpg" alt="">
+                            <p class="mb-5"><b>Conception de solution technique d'une application de restauration en
+                                ligne:</b><br/>
+                                Pour structurer votre réflexion vous utiliserez UML et construirez une suite de
+                                diagrammes afin de modéliser les besoins de l’application et le diagramme de classe pour
+                                modéliser les entités de l'application. Une fois que les diagrammes vous satisferont,
+                                vous réaliserez le schéma de base de données MySQL correspondant puis vous remplirez la
+                                base avec des premières valeurs fictives.<br/>
+                                Vous veillerez à produire des schémas UML cohérents par rapport au cahier des charges et
+                                respectant les standards UML. Vous concevrez ensuite un schéma de base de données SQL
+                                adéquat. </p>
+                            <a type="button" class="btn btn-primary" href="https://github.com/thomas-demagny/P4-UML"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modal 5 -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-3">Blog PHP</h2>
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/blog.jpg" alt="">
+                            <p class="mb-5">Développement d'une application web avec PHP et MySQL:<br/>
+                                - Conceptualiser la structure de l'application en POO.<br/>
+                                - Gérer ses données avec une base de données.<br/>
+                                - Assurer le suivi qualité du projet (codacy, codeclimate)<br/>
+                                - Utilisation de Gitkraken, composer, npm, bootstrap, twig.</p>
+                            <a type="button" class="btn btn-primary" href="https://github.com/thomas-demagny/My_blog"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Github
+                            </a>
+                            <a type="button" class="btn btn-primary" href="https://blog.thomas-demagny.com"
+                               onclick="window.open(this.href);return false">
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modal 6 -->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog"
+     aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="portfolio-modal-title text-secondary mb-3">SnowTricks</h2>
+                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/snow.jpg" alt="">
+                            <p class="mb-5">En cours de réalisation. Il s'agit de créer un site communautaire sur le
+                                snow board en PHP/Symfony.</p>
+                            <a type="button" class="btn btn-primary" href="wip.html">
+                               <!--onclick="window.open(this.href);return false"-->
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Github
+                            </a>
+                            <a type="button" class="btn btn-primary" href="wip.html">
+                               <!--onclick="window.open(this.href);return false">-->
+                                <i class="fas fa-arrow-right fa-fw"></i>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Bootstrap core JavaScript -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
