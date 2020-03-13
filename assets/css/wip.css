@@ -1,0 +1,39 @@
+:root {
+    --btnColor: #64a19d;
+    --hoverStyle: #467370;
+    --dkStyle: #000000;
+}
+body {
+    background-color: var(--dkStyle);
+}
+.btn {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 2rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    border: 0;
+    text-decoration: none;
+}
+.btn-dark {
+    background-color: transparent;
+}
+
+.btn-dark:hover {
+    color: var(--hoverStyle);
+    background-color: var(--dkStyle);
+}
+
+
+.wip {
+    margin: auto;
+}
+
+footer {
+    position:absolute;
+    width:100%;
+    bottom: 0;
+    padding: 1rem 0;
+    background: black;
+}
